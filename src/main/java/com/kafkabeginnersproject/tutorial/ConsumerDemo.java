@@ -1,7 +1,6 @@
-package kafkaBegginersProject;
+package com.kafkabeginnersproject.tutorial;
 
 import java.time.Duration;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Properties;
 

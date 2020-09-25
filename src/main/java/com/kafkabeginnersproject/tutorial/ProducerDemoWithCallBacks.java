@@ -1,4 +1,4 @@
-package kafkaBegginersProject;
+package com.kafkabeginnersproject.tutorial;
 
 import java.util.Properties;
 

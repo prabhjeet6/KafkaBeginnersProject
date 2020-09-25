@@ -1,9 +1,7 @@
-package kafkaBegginersProject;
+package com.kafkabeginnersproject.tutorial;
 
 import java.time.Duration;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Properties;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -56,6 +54,7 @@ public class ConsumerDemoAssignAndSeek {
 			}
 			if(numberOfMessagesReadSoFar>=numberOfMessagesToRead) {
 				keepOnReading=false;
+                consumer.close();
 				break;
 			}
 		}

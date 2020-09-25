@@ -1,15 +1,16 @@
-package kafkaBegginersProject;
+package com.kafkabeginnersproject.tutorial;
 
 import java.util.Properties;
+import java.util.concurrent.ExecutionException;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
-public class ProducerDemo {
+public class ProducerDemoKeys {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		// create producer properties
 		Properties properties=new Properties();
 		String bootStrapServers="127.0.0.1:9092";
@@ -19,13 +20,15 @@ public class ProducerDemo {
 		
 		// create producer
 		KafkaProducer<String, String> producer=new KafkaProducer<String, String>(properties);
-		
+		for(int i=0;i<10;i++) {
+		String key="id_"+i;
 		//create a producer Record
-		ProducerRecord<String, String> record =new ProducerRecord<String, String>("first_topic", "hello world!");
+		ProducerRecord<String, String> record =new ProducerRecord<String, String>("first_topic",key, "Helloooo!");
 		
 		
-		// send data -asynchronous
-		producer.send(record);
+		// send data 
+		producer.send(record).get();//block .send() to make it asynchronous- don't do this in Production
+		}
 		//flush and close
 		producer.close(); 
 	}

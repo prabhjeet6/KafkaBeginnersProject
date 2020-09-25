@@ -1,2 +1,4 @@
 # KafkaBeginnersProject
-Simple Producer consumers for kafka using Java from stephen Maarek's Beginner's course
+
+Tutorial: Simple Producer and consumers for Kafka using Java from Stephen Maarek's Beginner's course
+

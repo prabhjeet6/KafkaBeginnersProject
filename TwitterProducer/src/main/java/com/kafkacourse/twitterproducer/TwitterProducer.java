@@ -26,12 +26,12 @@ public class TwitterProducer {
     Logger logger = LoggerFactory.getLogger(TwitterProducer.class.getName());
 
     // use your own credentials - don't share them with anyone
-    String consumerKey = "knAzlXs8W5X1VjeWAPsbRcZdI";
-    String consumerSecret = "YJA1sjEjp7nu2uajwSSgrqgrfhFufqQ0YsE4U79O4dmkUmoZSd";
-    String token = "1309339088076627968-ByXtB2Tw2Cm0OwqNrCFr0zMQA9HXYZ";
-    String secret = "dqxcuOz5QOGT3HUMiixqu3S7n2y7f2LSrhZadDeJfKAvk";
+    String consumerKey = "";
+    String consumerSecret = "";
+    String token = "";
+    String secret = "";
 
-    List<String> terms = Lists.newArrayList("World Heart Day");
+    List<String> terms = Lists.newArrayList("Hathras");
 
 
     public TwitterProducer(){}

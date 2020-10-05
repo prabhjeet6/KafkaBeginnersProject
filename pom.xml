@@ -28,6 +28,7 @@
 	<modules>
 		<module>KafkaConsumerElasticSearch</module>
 		<module>TwitterProducer</module>
-		
+
+		<module>KafkaStreamsFilterTweets</module>
 	</modules>
 </project>
